@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+
+\usepackage{enumitem}
+\usepackage[margin=2cm]{geometry}  % Set margins to 2cm
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Python Installation Instructions for Use in 5SC28 ML for S\&C}
+
+Python is a free and open-source alternative to MATLAB. It is the most popular language for deep learning applications. We will be using Python during the coming exercises. For these exercises, you will be using Python with some extensions for streamlined array data handling (e.g., numpy), visualization (e.g., matplotlib), machine learning (scikit-learn), and, of course, deep learning (PyTorch). Furthermore, the exercises will be provided as Jupyter notebooks, which allow for inline plotting and Markdown formatting.
+
+\subsection*{Quick-start}
+
+The easiest way to start with Python programming is to use the notebook system provided by Google Colab, which includes the PyTorch installation by default. This does require a Google Account and a stable internet connection.
+\begin{enumerate}[label=\arabic*.]
+    \item Open \href{https://colab.research.google.com/}{Google Colab}
+    \item Log in to your Google account.
+    \item Upload the desired notebook.
+    \item To save your work, either save it to your Google Drive or download it as a \texttt{.ipynb}.
+\end{enumerate}
+
+However, some visualizations, datasets, and the design project may not be compatible with this interface. Therefore, we recommend the local installation.
+
+\subsection*{Local Installation (Recommended)}
+
+Most of the required extensions are already included in the popular Python package manager: \textbf{Anaconda} (note: PyTorch is missing from this distribution and needs to be installed manually). If anything goes wrong, or you have any questions about the installation, feel free to contact TAs.
+\begin{enumerate}[label=\arabic*.]
+    \item Install Anaconda. (skip this step if you already have a version of anaconda)
+        \begin{itemize}
+            \item Download (\textasciitilde 450 MB) the Anaconda Python installer via the \href{https://www.anaconda.com/download}{Download page} (64-bit or 32-bit, dependent on your system).
+            \item Install by following the instructions after opening the installer.
+            \item See \href{https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/}{Problem Solving with Python} for detailed instructions.
+        \end{itemize}
+    \item Setup virtual environment with PyTorch
+        \begin{itemize}
+            \item Either open the anaconda navigator and launch the \texttt{CMD.exe Prompt} or \texttt {Powershell Prompt} or launch anaconda prompt by searching "anaconda prompt" in the start menu
+            \item Create a virtual environment using \\
+                  \texttt{conda create --name ml4sc python=x.x anaconda}, where \texttt{x.x} is the python version you desire. In this course you can use python 3.8 up to 3.11.
+            \item Either type \texttt{conda activate ml4sc} to activate the environment or close the Prompt and activate the ml4sc environment by using the dropdown menu in the top left of the anaconda navigator
+            \item Install pytorch using the instruction on \href{https://pytorch.org/get-started/locally/}. 
+            \item Type \texttt{conda install -c anaconda git} (needed to install modules from GitHub such as the design environment).
+        \end{itemize}
+    \item Opening a notebook.
+        \begin{itemize}
+            \item Open the Anaconda Navigator.
+            \item Activate the \texttt{ml4sc} environment if needed.
+            \item Launch the Jupyter Notebook or Jupyter Lab.
+            \item Navigate to the desired Notebook and open.
+            \item You can also launch the Notebook server in a specific directory by using PowerShell Prompt and the \texttt{ls} and \texttt{cd} commands.
+            \item You might also need to type \texttt{conda activate ml4sc}.
+            \item If you are in the desired directory, you can type \texttt{jupyter notebook} or \texttt{jupyter-lab}.
+        \end{itemize}
+\end{enumerate}
+
+\subsection*{What's Next}
+
+After the installation, one should open the \texttt{Quickstart-Tutorial.ipynb} notebook and thoughtfully go through the examples. Afterwards, you can start with the exercises.
+
+\end{document}
+
